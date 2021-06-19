@@ -9,7 +9,7 @@ import {
 
 const Navbar = () => {
   return (
-    <>
+   
       <NavContainer>
         <Userbox>
           <h1>Karla Vaz</h1>
@@ -28,7 +28,7 @@ const Navbar = () => {
 
         <LogoutButton>LOG OUT</LogoutButton>
       </NavContainer>
-    </>
+ 
   );
 };
 
