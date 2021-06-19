@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const HomeContainer = styled.div`
 
 display: flex;
+flex-direction: column;
 width: 70%;
-min-height: 80%;
+height: 80%;
 margin: auto;
 
 background-color: white;
