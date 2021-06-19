@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const NavContainer = styled.div`
-height: 100% !important;
-background-color: grey;
-width: 20%;
+  height: 100% !important;
+  background-color: #ffffff;
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: space-between !important;
+  flex-wrap: wrap;
   padding: 2rem;
- 
 `;
 
 export const LogoutButton = styled.button`
