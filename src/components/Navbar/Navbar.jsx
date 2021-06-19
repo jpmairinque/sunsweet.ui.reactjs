@@ -1,5 +1,5 @@
 import React from 'react'
-import {Userbox, NavList, NavItem, NavContainer} from './styles'
+import {Userbox, NavList, NavItem, NavContainer,LogoutButton} from './styles'
 
 const Navbar = () => {
     return (
@@ -19,6 +19,8 @@ const Navbar = () => {
                     <NavItem selectedIs={false}>History</NavItem>
                 </ul>
             </NavList>
+
+            <LogoutButton>LOG OUT</LogoutButton>
 
             </NavContainer>
             </>
