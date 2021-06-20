@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat', sans-serif ;
 }
 
-    html, body, #root {
-    width: 100%;
+    body,html {
+    
     height: 100%;
   }
 
@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
   }
 
   @font-face {
@@ -32,6 +33,6 @@ const GlobalStyle = createGlobalStyle`
 
 
 
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;

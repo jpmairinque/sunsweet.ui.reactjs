@@ -7,32 +7,25 @@ import styled from "styled-components";
 import Profile from "../Profile/Profile";
 
 const BottomDiv = styled.div`
-display:flex;
-height:100%;
-width:100%;`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+`;
 
 const Home = () => {
   return (
-   
     <HomeContainer>
       <Header />
       <BottomDiv>
-      <Navbar />
-      <Router>
-      <Route path="/">
-
-       <Profile/>
-
-      </Route>
-
-
-
-
-
-      </Router>
+        <Navbar />
+        <Router>
+          <Route path="/">
+            <Profile />
+          </Route>
+        </Router>
       </BottomDiv>
     </HomeContainer>
-
   );
 };
 

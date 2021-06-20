@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const NavContainer = styled.div`
- height: 100% !important;
   background-color: #ffffff;
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: space-between !important;
   flex-wrap: wrap;
   padding: 2rem;
   border-radius: 0px 0px 0px 15px;
+  box-shadow: 19px 0px 35px -17px #9a97ef;
 `;
 
 export const LogoutButton = styled.button`

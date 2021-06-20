@@ -5,7 +5,6 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   width: 70%;
   height: 80%;
-  margin: auto;
 
   background-color: #f4f3f3;
   border-radius: 15px;
