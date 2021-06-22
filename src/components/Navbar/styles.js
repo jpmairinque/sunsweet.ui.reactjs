@@ -55,13 +55,7 @@ export const NavList = styled.div``;
 export const NavItem = styled.li`
   list-style: none;
 
-  @font-face {
-    font-family: "Quicksand", sans-serif;
-    font-style: normal;
-    src: url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-  }
-
-  font-family: "Quicksand", sans-serif;
+ 
   font-size: 1.2rem;
   margin-bottom: 1rem;
   cursor: pointer;

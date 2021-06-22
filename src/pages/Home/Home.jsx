@@ -8,7 +8,7 @@ import Themes from "../Themes/Themes";
 import { UserProvider } from "../../contexts/UserContext";
 
 
-const Home = () => {
+const Home = (props) => {
   return (
     <UserProvider>
     <HomeContainer>
@@ -20,7 +20,7 @@ const Home = () => {
             <Profile />
           </Route>
           <Route path="/themes">
-            <Themes />
+            <Themes theme={props.theme} setTheme={props.setTheme}/>
           </Route>
         </Router>
       </BottomDiv>
