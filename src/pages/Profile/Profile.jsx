@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import {
   Input,
   PageContainer,
@@ -9,52 +9,63 @@ import {
   PageHeader
 } from "./styles";
 
+import { UserContext } from "../../contexts/UserContext";
+
 const Profile = () => {
 
 
+  
+
   const [toggleEdit, setToggleEdit] = useState(false)
-  const [profileData, setProfileData] = useState({
-    name: "Karla Vaz",
-    username: "thekarlavaz",
-    email: "karlavaz@mail.com",
-    birth: "08/05/1997",
-  });
+  const [userData, setUserData] = useContext(UserContext);
+
+  const [newData, setNewData] = useState({
+    name: userData.name,
+    username: userData.username,
+    email: userData.email,
+    birth: userData.birth
+  })
+
 
   return (
     <PageContainer>
 
       <PageHeader>
         <PageTitle>Profile</PageTitle>
-        <EditButton onClick={()=>{setToggleEdit(!toggleEdit)}}>{toggleEdit ? "Save" : "Edit Profile"}</EditButton>
+        <EditButton onClick={()=>{setToggleEdit(!toggleEdit); setUserData(newData)}}>
+          {toggleEdit ? "Save" : "Edit Profile"}
+        </EditButton>
       </PageHeader>
-
+       
         <InputLabel>
             <h3>NAME</h3>
             <span>How should we call you?</span>
-            {toggleEdit ? <Input type="text" value={profileData.name} 
-            onChange={(e)=> setProfileData(prevState => ({...prevState, name:e.target.value}))}/> : <p>{profileData.name}</p>}
+            {toggleEdit ? <Input type="text" value={newData.name} 
+            onChange={(e)=> setNewData(prevState => ({...prevState, name:e.target.value}))}/> : <p>{newData.name}</p>}
         </InputLabel>
 
         <InputLabel>
             <h3>USERNAME</h3>
             <span>It’s your ID on our plataform!</span>
-            {toggleEdit ? <Input type="text" value={profileData.username} 
-            onChange={(e)=> setProfileData(prevState => ({...prevState, username:e.target.value}))}/> : <p>{profileData.username}</p>}
+            {toggleEdit ? <Input type="text" value={newData.username} 
+            onChange={(e)=> setNewData(prevState => ({...prevState, username:e.target.value}))}/> : <p>{newData.username}</p>}
         </InputLabel>
 
         <InputLabel>
             <h3>EMAIL</h3>
             <span>You can always change it.</span>
-            {toggleEdit ? <Input type="text" value={profileData.email} 
-            onChange={(e)=> setProfileData(prevState => ({...prevState, email:e.target.value}))}/> : <p>{profileData.email}</p>}
+            {toggleEdit ? <Input type="text" value={newData.email} 
+            onChange={(e)=> setNewData(prevState => ({...prevState, email:e.target.value}))}/> : <p>{newData.email}</p>}
         </InputLabel>
 
         <InputLabel>
             <h3>DATE OF BIRTH</h3>
             <span>When were you born?</span>
-            {toggleEdit ? <Input type="text" value={profileData.birth} 
-            onChange={(e)=> setProfileData(prevState => ({...prevState, birth:e.target.value}))}/> : <p>{profileData.birth}</p>}
+            {toggleEdit ? <Input type="text" value={newData.birth} 
+            onChange={(e)=> setNewData(prevState => ({...prevState, birth:e.target.value}))}/> : <p>{userData.birth}</p>}
         </InputLabel>
+
+    
         
     </PageContainer>
   );

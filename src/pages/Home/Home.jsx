@@ -1,31 +1,31 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
-import { HomeContainer } from "./styles";
+import { HomeContainer, BottomDiv } from "./styles";
 import Header from "../../components/Header/Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import styled from "styled-components";
 import Profile from "../Profile/Profile";
+import Themes from "../Themes/Themes";
+import { UserProvider } from "../../contexts/UserContext";
 
-const BottomDiv = styled.div`
-  display: flex;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-`;
 
 const Home = () => {
   return (
+    <UserProvider>
     <HomeContainer>
       <Header />
       <BottomDiv>
-        <Navbar />
-        <Router>
-          <Route path="/">
+      <Router>
+        <Navbar />        
+          <Route exact path="/">
             <Profile />
+          </Route>
+          <Route path="/themes">
+            <Themes />
           </Route>
         </Router>
       </BottomDiv>
     </HomeContainer>
+    </UserProvider>
   );
 };
 

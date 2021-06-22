@@ -1,11 +1,25 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+
+export const FadeInAnimation=keyframes`
+
+from { transform: translateY(-10px) }
+  to { transform: translateY(0px) }
+`
+export const FadeOutAnimation=keyframes`
+
+from { transform: translateY(10px) }
+  to { transform: translateY(0px) }
+`
+
 
 export const Input = styled.input`
   width: 80%;
-  height: 40px;
+  height: 1.2rem;
   padding: 1rem;
   border-radius: 50px;
   border: none;
+  animation-name: ${FadeInAnimation};
+  animation-duration: 0.5s;
 `;
 
 export const PageContainer = styled.div`
@@ -21,7 +35,7 @@ export const PageHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
   padding: 2rem;
   
   button {
@@ -36,6 +50,8 @@ export const PageTitle = styled.h1`
 `;
 
 export const InputLabel = styled.div`
+
+  font-family: 'PT Sans', sans-serif;
   margin-bottom: 2rem;
   position: relative;
   display: flex;
@@ -51,11 +67,14 @@ export const InputLabel = styled.div`
     height: 100%;
     width: 0.3rem;
     transform: translate(-15px);
+    transition: 5s;
   }
 
   p {
     margin-top: 0.2rem;
     font-size: 1.2rem;
+    font-weight: 600;
+    animation:${FadeOutAnimation} 0.5s;
   }
   h3 {
     color: #7d79ef;
@@ -63,6 +82,10 @@ export const InputLabel = styled.div`
   span {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    font-style: italic;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: grey;
   }
 `;
 
@@ -82,3 +105,4 @@ export const EditButton = styled.button`
     color: white;
   }
 `;
+

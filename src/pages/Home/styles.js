@@ -10,3 +10,10 @@ export const HomeContainer = styled.div`
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
+
+export const BottomDiv = styled.div`
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+`;
