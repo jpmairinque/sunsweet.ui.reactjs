@@ -1,11 +1,12 @@
 import styled, {keyframes} from "styled-components";
 
-export const FadeInAnimation=keyframes`
+
+export const GoDownAnimation=keyframes`
 
 from { transform: translateY(-10px) }
   to { transform: translateY(0px) }
 `
-export const FadeOutAnimation=keyframes`
+export const GoUpAnimation=keyframes`
 
 from { transform: translateY(10px) }
   to { transform: translateY(0px) }
@@ -18,7 +19,7 @@ export const Input = styled.input`
   padding: 1rem;
   border-radius: 50px;
   border: none;
-  animation-name: ${FadeInAnimation};
+  animation-name: ${GoDownAnimation};
   animation-duration: 0.5s;
 `;
 
@@ -74,7 +75,7 @@ export const InputLabel = styled.div`
     margin-top: 0.2rem;
     font-size: 1.2rem;
     font-weight: 600;
-    animation:${FadeOutAnimation} 0.5s;
+    animation:${GoUpAnimation} 0.5s;
   }
   h3 {
     color: #7d79ef;

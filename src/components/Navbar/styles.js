@@ -54,15 +54,15 @@ export const NavList = styled.div``;
 
 export const NavItem = styled.li`
   list-style: none;
-
- 
   font-size: 1.2rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.05s;
   &:hover {
     color: #9b98ee;
   }
   ${(props) =>
-    props.selectedIs === true ? "color: #9B98EE; font-weight:600; " : "black"}
+    props.selectedIs === true
+      ? "font-weight:600; color: #9B98EE; transition: 0.5s;"
+      : "color: black"}
 `;

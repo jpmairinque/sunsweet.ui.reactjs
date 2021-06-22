@@ -1,5 +1,5 @@
 import {useContext, useState} from "react";
-import { useHistory } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import {
   Userbox,
   NavList,
@@ -13,6 +13,10 @@ import { UserContext } from "../../contexts/UserContext";
 const Navbar = () => {
 
   const history = useHistory()
+  const location = useLocation()
+
+  console.log(location.pathname)
+
   const [userData, setUserData] = useContext(UserContext);
 
 
@@ -26,8 +30,8 @@ const Navbar = () => {
 
         <NavList>
           <ul>
-            <NavItem onClick={()=>{history.push('/')}} selectedIs={true}>Profile</NavItem>
-            <NavItem onClick={()=>{history.push('/themes')}} selectedIs={false}>Themes</NavItem>
+            <NavItem onClick={()=>{history.push('/')}} selectedIs={location.pathname==="/"}>Profile</NavItem>
+            <NavItem onClick={()=>{history.push('/themes')}} selectedIs={location.pathname==="/themes"}>Themes</NavItem>
             <NavItem selectedIs={false}>Privacy</NavItem>
             <NavItem selectedIs={false}>Acessibility</NavItem>
             <NavItem selectedIs={false}>History</NavItem>
