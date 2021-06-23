@@ -35,7 +35,8 @@ const Navbar = () => {
               onClick={()=>{history.push('/themes')}} 
               selectedIs={location.pathname==="/themes"}>Themes</NavItem>
             <NavItem 
-              selectedIs={false}>Privacy</NavItem>
+             onClick={()=>{history.push('/privacy')}} 
+              selectedIs={location.pathname==="/privacy"}>Privacy</NavItem>
             <NavItem 
               selectedIs={false}>Acessibility</NavItem>
             <NavItem 

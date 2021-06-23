@@ -8,8 +8,8 @@ export const ThemeBox = styled.div`
   background: ${(props) => props.theme};
   transition: 1s;
   cursor: pointer;
-  animation-name: ${GoUpAnimation};
-  animation-duration: 0.5s;
+  animation: ${GoUpAnimation} 0.5s;
+  
   &:hover {
     transform: scale(1.08);
   }

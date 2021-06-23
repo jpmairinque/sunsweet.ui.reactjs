@@ -1,9 +1,8 @@
-import { useState, createContext} from "react";
+import { useState, useEffect, createContext } from "react";
 
 export const UserContext = createContext();
 
 export const UserProvider = (props) => {
-
   // Declaring default user data
 
   const initialUserData = {
@@ -20,10 +19,16 @@ export const UserProvider = (props) => {
   }
 
   // Setting userData based on localStorage data
-  
+
   const [userData, setUserData] = useState(
     JSON.parse(localStorage.getItem("userData"))
   );
+
+  // Updating localStorage everytime userData changes
+
+  useEffect(() => {
+    localStorage.setItem("userData", JSON.stringify(userData));
+  }, [userData]);
 
   return (
     <UserContext.Provider value={[userData, setUserData]}>

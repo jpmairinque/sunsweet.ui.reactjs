@@ -11,7 +11,6 @@ function App() {
   return (
     <>
       <Home theme={theme} setTheme={setTheme} />
-
       <GlobalStyle theme={theme} />
     </>
   );

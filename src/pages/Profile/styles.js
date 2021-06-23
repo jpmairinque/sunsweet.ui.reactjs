@@ -27,7 +27,14 @@ export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
-  overflow: scroll;
+
+  @media(max-height: 850px) {
+   
+     overflow: scroll;
+   
+  }
+
+
 `;
 
 export const PageHeader = styled.div`

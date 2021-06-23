@@ -24,7 +24,6 @@ const Profile = () => {
   const handleSubmit = () => {
     setToggleEdit(!toggleEdit); 
     setUserData(newData); 
-    localStorage.setItem('userData', JSON.stringify(newData))
   }
   
   return (
@@ -47,7 +46,8 @@ const Profile = () => {
             <Input 
               type="text" 
               value={newData.name} 
-              onChange= {(e)=> setNewData(prevState => ({...prevState, name:e.target.value}))}/> : <p>{newData.name}</p>
+              onChange= {(e)=> setNewData(prevState => ({...prevState, name:e.target.value}))}/> 
+              : <p>{newData.name}</p>
             }
         </InputLabel>
 
@@ -58,7 +58,8 @@ const Profile = () => {
               <Input 
               type="text" 
               value={newData.username} 
-              onChange={(e)=> setNewData(prevState => ({...prevState, username:e.target.value}))}/> : <p>{newData.username}</p>
+              onChange={(e)=> setNewData(prevState => ({...prevState, username:e.target.value}))}/> 
+              : <p>{newData.username}</p>
               }
         </InputLabel>
 
@@ -69,7 +70,8 @@ const Profile = () => {
             <Input 
             type="text" 
             value={newData.email} 
-            onChange={(e)=> setNewData(prevState => ({...prevState, email:e.target.value}))}/> : <p>{newData.email}</p>
+            onChange={(e)=> setNewData(prevState => ({...prevState, email:e.target.value}))}/>
+            : <p>{newData.email}</p>
             }
         </InputLabel>
 
@@ -80,7 +82,8 @@ const Profile = () => {
             <Input 
             type="text" 
             value={newData.birth} 
-            onChange={(e)=> setNewData(prevState => ({...prevState, birth:e.target.value}))}/> : <p>{userData.birth}</p>
+            onChange={(e)=> setNewData(prevState => ({...prevState, birth:e.target.value}))}/> 
+            : <p>{userData.birth}</p>
             }
         </InputLabel>   
       </>
