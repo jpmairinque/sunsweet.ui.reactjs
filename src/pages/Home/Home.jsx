@@ -1,38 +1,39 @@
-import {createContext} from "react";
+import { useContext } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { UserProvider } from "../../contexts/UserContext";
 import { PrivacyProvider } from "../../contexts/PrivacyContext";
+import { ThemesContext } from "../../contexts/ThemeContext";
 import { HomeContainer, BottomDiv } from "./styles";
+
 import Navbar from "../../components/Navbar/Navbar";
 import Header from "../../components/Header/Header";
 import Profile from "../Profile/Profile";
 import Themes from "../Themes/Themes";
 import Privacy from "../Privacy/Privacy";
-export const ThemesContext = createContext()
+import GlobalStyle from "../../styles/global";
 
-const Home = (props) => {
+
+const Home = () => {
+  
+  const [theme] = useContext(ThemesContext);
 
   return (
-
-    <ThemesContext.Provider value={[props.theme, props.setTheme]}>  
-    
-      <UserProvider>
+    <UserProvider>
       <PrivacyProvider>
         <HomeContainer>
-          <Header/> 
+          <Header />
           <Router>
-            <BottomDiv>       
-              <Navbar />                
-                <Route exact path="/" component={Profile}/>
-                <Route path="/themes" component={Themes}/>
-                <Route path="/privacy" component={Privacy}/>
-            </BottomDiv> 
+            <BottomDiv>
+              <Navbar />
+              <Route exact path="/" component={Profile} />
+              <Route path="/themes" component={Themes} />
+              <Route path="/privacy" component={Privacy} />
+            </BottomDiv>
           </Router>
         </HomeContainer>
       </PrivacyProvider>
-      </UserProvider>
-    </ThemesContext.Provider>
-    
+      <GlobalStyle theme={theme} />
+    </UserProvider>
   );
 };
 

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ThemesContext } from "../Home/Home";
+import { ThemesContext } from "../../contexts/ThemeContext";
 import * as S from "../Profile/styles";
 import * as T from "./styles";
 

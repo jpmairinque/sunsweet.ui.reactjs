@@ -1,15 +1,14 @@
-import {useState, useContext} from "react";
+import { useContext } from "react";
 import { PrivacyContext } from "../../contexts/PrivacyContext";
+
 import * as S from "../Profile/styles";
 import * as P from "./styles";
+
 const Privacy = () => {
 
   const [privacyInfo, setPrivacyInfo] = useContext(PrivacyContext)
     
-  
- 
-
-  return (
+    return (
     <S.PageContainer>
       <S.PageHeader>
         <S.PageTitle>Privacy</S.PageTitle>
