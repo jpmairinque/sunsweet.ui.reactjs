@@ -1,24 +1,33 @@
-import { useState, createContext } from "react";
+import { useState, createContext} from "react";
 
-export const UserContext = createContext()
+export const UserContext = createContext();
 
 export const UserProvider = (props) => {
 
-    const [userData, setUserData] = useState({
-        name: "Karla Vaz",
-        username: "thekarlavaz",
-        email: "karlavaz@mail.com",
-        birth: "08/05/1997",
-      })
+  // Declaring default user data
 
-      return(
+  const initialUserData = {
+    name: "Karla Vaz",
+    username: "thekarlavaz",
+    email: "karlavaz@mail.com",
+    birth: "08/05/1997",
+  };
 
-        <UserContext.Provider value={[userData, setUserData]}>
+  // Validating if the localStorage exists
 
-        {props.children}
+  if (!localStorage.getItem("userData")) {
+    localStorage.setItem("userData", JSON.stringify(initialUserData));
+  }
 
-        </UserContext.Provider>
-      )
+  // Setting userData based on localStorage data
+  
+  const [userData, setUserData] = useState(
+    JSON.parse(localStorage.getItem("userData"))
+  );
 
-}
-
+  return (
+    <UserContext.Provider value={[userData, setUserData]}>
+      {props.children}
+    </UserContext.Provider>
+  );
+};

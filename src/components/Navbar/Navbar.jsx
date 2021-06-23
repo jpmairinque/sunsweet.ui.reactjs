@@ -15,7 +15,7 @@ const Navbar = () => {
   const history = useHistory()
   const location = useLocation()
 
-  console.log(location.pathname)
+
 
   const [userData, setUserData] = useContext(UserContext);
 

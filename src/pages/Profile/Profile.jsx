@@ -20,13 +20,19 @@ const Profile = () => {
     email: userData.email,
     birth: userData.birth
   })
+
+  const handleSubmit = () => {
+    setToggleEdit(!toggleEdit); 
+    setUserData(newData); 
+    localStorage.setItem('userData', JSON.stringify(newData))
+  }
   
   return (
     <PageContainer>
       <PageHeader>
           <PageTitle>Profile</PageTitle>
           <EditButton 
-          onClick={()=>{setToggleEdit(!toggleEdit); setUserData(newData)}}>
+          onClick={handleSubmit}>
             {toggleEdit ? "Save" : "Edit Profile"}
           </EditButton>
       </PageHeader>
