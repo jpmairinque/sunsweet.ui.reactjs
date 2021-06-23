@@ -15,14 +15,12 @@ const Navbar = () => {
   const history = useHistory()
   const location = useLocation()
 
-
-
   const [userData, setUserData] = useContext(UserContext);
-
 
   return (
 
       <NavContainer>
+
         <Userbox>
           <h1>{userData.name}</h1>
           <p>{userData.username}</p>
@@ -30,15 +28,23 @@ const Navbar = () => {
 
         <NavList>
           <ul>
-            <NavItem onClick={()=>{history.push('/')}} selectedIs={location.pathname==="/"}>Profile</NavItem>
-            <NavItem onClick={()=>{history.push('/themes')}} selectedIs={location.pathname==="/themes"}>Themes</NavItem>
-            <NavItem selectedIs={false}>Privacy</NavItem>
-            <NavItem selectedIs={false}>Acessibility</NavItem>
-            <NavItem selectedIs={false}>History</NavItem>
+            <NavItem 
+              onClick={()=>{history.push('/')}} 
+              selectedIs={location.pathname==="/"}>Profile</NavItem>
+            <NavItem 
+              onClick={()=>{history.push('/themes')}} 
+              selectedIs={location.pathname==="/themes"}>Themes</NavItem>
+            <NavItem 
+              selectedIs={false}>Privacy</NavItem>
+            <NavItem 
+              selectedIs={false}>Acessibility</NavItem>
+            <NavItem 
+              selectedIs={false}>History</NavItem>
           </ul>
         </NavList>
 
         <LogoutButton>LOG OUT</LogoutButton>
+
       </NavContainer>
  
   );

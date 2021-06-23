@@ -1,9 +1,10 @@
-import * as S from "../Profile/styles";
-import * as T from "./styles";
 import { useContext } from "react";
 import { ThemesContext } from "../Home/Home";
+import * as S from "../Profile/styles";
+import * as T from "./styles";
 
 const Themes = () => {
+  
   const [theme, setTheme] = useContext(ThemesContext);
 
   const themelist = {

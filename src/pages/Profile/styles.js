@@ -1,17 +1,15 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
-
-export const GoDownAnimation=keyframes`
+export const GoDownAnimation = keyframes`
 
 from { transform: translateY(-10px) }
   to { transform: translateY(0px) }
-`
-export const GoUpAnimation=keyframes`
+`;
+export const GoUpAnimation = keyframes`
 
 from { transform: translateY(10px) }
   to { transform: translateY(0px) }
-`
-
+`;
 
 export const Input = styled.input`
   width: 80%;
@@ -38,21 +36,19 @@ export const PageHeader = styled.div`
   align-items: center;
   margin-bottom: 0.8rem;
   padding: 2rem;
-  
+
   button {
     margin-right: 2rem;
   }
 `;
 
 export const PageTitle = styled.h1`
-
   font-size: 3rem;
   font-weight: 600;
 `;
 
 export const InputLabel = styled.div`
-
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   margin-bottom: 2rem;
   position: relative;
   display: flex;
@@ -75,7 +71,7 @@ export const InputLabel = styled.div`
     margin-top: 0.2rem;
     font-size: 1.2rem;
     font-weight: 600;
-    animation:${GoUpAnimation} 0.5s;
+    animation: ${GoUpAnimation} 0.5s;
   }
   h3 {
     color: #7d79ef;
@@ -106,4 +102,3 @@ export const EditButton = styled.button`
     color: white;
   }
 `;
-

@@ -28,7 +28,9 @@ const Profile = () => {
   }
   
   return (
+
     <PageContainer>
+
       <PageHeader>
           <PageTitle>Profile</PageTitle>
           <EditButton 
@@ -36,7 +38,8 @@ const Profile = () => {
             {toggleEdit ? "Save" : "Edit Profile"}
           </EditButton>
       </PageHeader>
-       
+      
+      <>
         <InputLabel >
             <h3>NAME</h3>
             <span>How should we call you?</span>
@@ -79,7 +82,9 @@ const Profile = () => {
             value={newData.birth} 
             onChange={(e)=> setNewData(prevState => ({...prevState, birth:e.target.value}))}/> : <p>{userData.birth}</p>
             }
-        </InputLabel>      
+        </InputLabel>   
+      </>
+
     </PageContainer>
   );
 };
