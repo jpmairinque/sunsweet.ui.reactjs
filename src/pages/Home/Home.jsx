@@ -13,6 +13,7 @@ import Header from "../../components/Header/Header";
 import Profile from "../Profile/Profile";
 import Themes from "../Themes/Themes";
 import Privacy from "../Privacy/Privacy";
+import Acessibility from "../Acessibility/Acessibility";
 
 const Home = () => {
   const [themeData] = useContext(ThemesContext);
@@ -28,6 +29,7 @@ const Home = () => {
               <Route exact path="/" component={Profile} />
               <Route path="/themes" component={Themes} />
               <Route path="/privacy" component={Privacy} />
+              <Route path="/acessibility" component={Acessibility} />
             </BottomDiv>
           </Router>
         </HomeContainer>

@@ -15,7 +15,7 @@ const Navbar = () => {
   const history = useHistory()
   const location = useLocation()
 
-  const [userData, setUserData] = useContext(UserContext);
+  const [userData] = useContext(UserContext);
 
   return (
 
@@ -38,7 +38,8 @@ const Navbar = () => {
              onClick={()=>{history.push('/privacy')}} 
               selectedIs={location.pathname==="/privacy"}>Privacy</NavItem>
             <NavItem 
-              selectedIs={false}>Acessibility</NavItem>
+              onClick={()=>{history.push('/acessibility')}} 
+              selectedIs={location.pathname==="/acessibility"}>Acessibility</NavItem>
             <NavItem 
               selectedIs={false}>History</NavItem>
           </ul>

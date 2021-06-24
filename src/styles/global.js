@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
 
 body,html {    
 height: 100%;
+font-size: ${(props) => props.themeData.fontsize} ;
   }
 
  #root{

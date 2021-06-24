@@ -4,7 +4,7 @@ export const ThemesContext = createContext();
 
 export const ThemesProvider = (props) => {
 
-   // Declaring default theme data
+   // Declaring default themeData
 
   const initialThemeData = {
     background: "linear-gradient(to right, #e55d87, #5fc3e4)",
