@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 
+
+
 *{
     padding: 0;
     margin: 0;
@@ -28,7 +30,7 @@ height: 100%;
   }
 
  #root{
-    background: ${(props) => props.theme} ;
+    background: ${(props) => props.themeData.background} ;
 
     display: flex;
     justify-content: center;

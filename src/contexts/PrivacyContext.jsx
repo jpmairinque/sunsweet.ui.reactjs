@@ -3,6 +3,7 @@ import { useState, useEffect, createContext } from "react";
 export const PrivacyContext = createContext();
 
 export const PrivacyProvider = (props) => {
+
   // Declaring default user data
 
   const initialPrivacyData = {
@@ -11,7 +12,7 @@ export const PrivacyProvider = (props) => {
     sharing: "Anyone",
   };
 
-  // Validating if the localStorage exists
+  // Validating if localStorage exists
 
   if (!localStorage.getItem("privacyData")) {
     localStorage.setItem("privacyData", JSON.stringify(initialPrivacyData));

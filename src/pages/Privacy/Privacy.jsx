@@ -10,6 +10,7 @@ const Privacy = () => {
     
     return (
     <S.PageContainer>
+      
       <S.PageHeader>
         <S.PageTitle>Privacy</S.PageTitle>
       </S.PageHeader>
@@ -47,7 +48,9 @@ const Privacy = () => {
             <P.Option>Nobody</P.Option>
           </P.Select>
         </S.InputLabel>
+
       </>
+
     </S.PageContainer>
   );
 };

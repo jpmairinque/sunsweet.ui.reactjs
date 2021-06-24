@@ -5,7 +5,7 @@ import * as T from "./styles";
 
 const Themes = () => {
   
-  const [theme, setTheme] = useContext(ThemesContext);
+  const [themeData, setThemeData] = useContext(ThemesContext);
 
   const themelist = {
     pinkPlease: "linear-gradient(to right, #e55d87, #5fc3e4)",
@@ -21,19 +21,19 @@ const Themes = () => {
       </S.PageHeader>
       <T.FlexWrapper>
         <T.ThemeBox
-          onClick={() => setTheme(themelist.pinkPlease)}
+          onClick={() => setThemeData(prev => ({...prev, background: themelist.pinkPlease}))}
           theme={themelist.pinkPlease}
         ></T.ThemeBox>
         <T.ThemeBox
-          onClick={() => setTheme(themelist.deepPurple)}
+          onClick={() => setThemeData(prev => ({...prev, background: themelist.deepPurple}))}
           theme={themelist.deepPurple}
         ></T.ThemeBox>
         <T.ThemeBox
-          onClick={() => setTheme(themelist.cleanOrange)}
+          onClick={() => setThemeData(prev => ({...prev, background: themelist.cleanOrange}))}
           theme={themelist.cleanOrange}
         ></T.ThemeBox>
         <T.ThemeBox
-          onClick={() => setTheme(themelist.bloomBlue)}
+          onClick={() => setThemeData(prev => ({...prev, background: themelist.bloomBlue}))}
           theme={themelist.bloomBlue}
         ></T.ThemeBox>
       </T.FlexWrapper>
