@@ -10,9 +10,10 @@ import {
 } from "./styles";
 
 const Profile = () => {  
-
-  const [toggleEdit, setToggleEdit] = useState(false)
+  
   const [userData, setUserData] = useContext(UserContext);
+  const [toggleEdit, setToggleEdit] = useState(false)
+  
   
   const [newData, setNewData] = useState({
     name: userData.name,
@@ -45,6 +46,7 @@ const Profile = () => {
             {toggleEdit ? 
             <Input 
               type="text" 
+              maxLength="15"
               value={newData.name} 
               onChange= {(e)=> setNewData(prevState => ({...prevState, name:e.target.value}))}/> 
               : <p>{newData.name}</p>
@@ -57,9 +59,10 @@ const Profile = () => {
               {toggleEdit ? 
               <Input 
               type="text" 
+              maxLength="15"
               value={newData.username} 
               onChange={(e)=> setNewData(prevState => ({...prevState, username:e.target.value}))}/> 
-              : <p>{newData.username}</p>
+              : <p>{"@" + newData.username}</p>
               }
         </InputLabel>
 
@@ -69,6 +72,7 @@ const Profile = () => {
             {toggleEdit ? 
             <Input 
             type="text" 
+            maxLength="25"
             value={newData.email} 
             onChange={(e)=> setNewData(prevState => ({...prevState, email:e.target.value}))}/>
             : <p>{newData.email}</p>
@@ -81,6 +85,7 @@ const Profile = () => {
             {toggleEdit ? 
             <Input 
             type="text" 
+            maxLength="15"
             value={newData.birth} 
             onChange={(e)=> setNewData(prevState => ({...prevState, birth:e.target.value}))}/> 
             : <p>{userData.birth}</p>

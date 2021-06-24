@@ -15,29 +15,31 @@ const Themes = () => {
   };
 
   return (
+
     <S.PageContainer>
-      <S.PageHeader>
-        <S.PageTitle>Theme</S.PageTitle>
-      </S.PageHeader>
-      <T.FlexWrapper>
-        <T.ThemeBox
-          onClick={() => setThemeData(prev => ({...prev, background: themelist.pinkPlease}))}
-          theme={themelist.pinkPlease}
-        ></T.ThemeBox>
-        <T.ThemeBox
-          onClick={() => setThemeData(prev => ({...prev, background: themelist.deepPurple}))}
-          theme={themelist.deepPurple}
-        ></T.ThemeBox>
-        <T.ThemeBox
-          onClick={() => setThemeData(prev => ({...prev, background: themelist.cleanOrange}))}
-          theme={themelist.cleanOrange}
-        ></T.ThemeBox>
-        <T.ThemeBox
-          onClick={() => setThemeData(prev => ({...prev, background: themelist.bloomBlue}))}
-          theme={themelist.bloomBlue}
-        ></T.ThemeBox>
-      </T.FlexWrapper>
+        <S.PageHeader>
+          <S.PageTitle>Theme</S.PageTitle>
+        </S.PageHeader>
+        <T.FlexWrapper>
+          <T.ThemeBox
+            onClick={() => setThemeData(prev => ({...prev, background: themelist.pinkPlease}))}
+            theme={themelist.pinkPlease}
+          ></T.ThemeBox>
+          <T.ThemeBox
+            onClick={() => setThemeData(prev => ({...prev, background: themelist.deepPurple}))}
+            theme={themelist.deepPurple}
+          ></T.ThemeBox>
+          <T.ThemeBox
+            onClick={() => setThemeData(prev => ({...prev, background: themelist.cleanOrange}))}
+            theme={themelist.cleanOrange}
+          ></T.ThemeBox>
+          <T.ThemeBox
+            onClick={() => setThemeData(prev => ({...prev, background: themelist.bloomBlue}))}
+            theme={themelist.bloomBlue}
+          ></T.ThemeBox>
+        </T.FlexWrapper>
     </S.PageContainer>
+
   );
 };
 

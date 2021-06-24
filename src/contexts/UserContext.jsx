@@ -31,8 +31,10 @@ export const UserProvider = (props) => {
   }, [userData]);
 
   return (
+
     <UserContext.Provider value={[userData, setUserData]}>
       {props.children}
     </UserContext.Provider>
+    
   );
 };

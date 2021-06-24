@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <ThemesProvider>
-        <Home />
+        <Home/>
       </ThemesProvider>
     </>
   );

@@ -1,12 +1,6 @@
-import {useContext, useState} from "react";
+import {useContext} from "react";
 import { useHistory, useLocation } from "react-router";
-import {
-  Userbox,
-  NavList,
-  NavItem,
-  NavContainer,
-  LogoutButton,
-} from "./styles";
+import * as S from "./styles";
 
 import { UserContext } from "../../contexts/UserContext";
 
@@ -19,35 +13,34 @@ const Navbar = () => {
 
   return (
 
-      <NavContainer>
+      <S.NavContainer>
 
-        <Userbox>
+        <S.Userbox>
           <h1>{userData.name}</h1>
-          <p>{userData.username}</p>
-        </Userbox>
+          <p>{"@" + userData.username}</p>
+        </S.Userbox>
 
-        <NavList>
+        <S.NavList>
           <ul>
-            <NavItem 
-              onClick={()=>{history.push('/')}} 
-              selectedIs={location.pathname==="/"}>Profile</NavItem>
-            <NavItem 
-              onClick={()=>{history.push('/themes')}} 
-              selectedIs={location.pathname==="/themes"}>Themes</NavItem>
-            <NavItem 
-             onClick={()=>{history.push('/privacy')}} 
-              selectedIs={location.pathname==="/privacy"}>Privacy</NavItem>
-            <NavItem 
-              onClick={()=>{history.push('/acessibility')}} 
-              selectedIs={location.pathname==="/acessibility"}>Acessibility</NavItem>
-            <NavItem 
-              selectedIs={false}>History</NavItem>
+            <S.NavItem 
+              onClick={()=>{history.push('/home/profile')}} 
+              selectedIs={location.pathname==="/home/profile"}>Profile</S.NavItem>
+            <S.NavItem 
+              onClick={()=>{history.push('/home/themes')}} 
+              selectedIs={location.pathname==="/home/themes"}>Themes</S.NavItem>
+            <S.NavItem 
+             onClick={()=>{history.push('/home/privacy')}} 
+              selectedIs={location.pathname==="/home/privacy"}>Privacy</S.NavItem>
+            <S.NavItem 
+              onClick={()=>{history.push('/home/acessibility')}} 
+              selectedIs={location.pathname==="/home/acessibility"}>Acessibility</S.NavItem>
+          
           </ul>
-        </NavList>
+        </S.NavList>
 
-        <LogoutButton>LOG OUT</LogoutButton>
+        <S.LogoutButton onClick={()=>{history.push('/logout')}}>LOG OUT</S.LogoutButton>
 
-      </NavContainer>
+      </S.NavContainer>
  
   );
 };

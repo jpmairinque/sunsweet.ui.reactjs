@@ -17,8 +17,7 @@ export const Input = styled.input`
   padding: 1rem;
   border-radius: 50px;
   border: none;
-  animation-name: ${GoDownAnimation};
-  animation-duration: 0.5s;
+  animation: ${GoDownAnimation} 0.5s;
 `;
 
 export const PageContainer = styled.div`
@@ -28,13 +27,9 @@ export const PageContainer = styled.div`
   flex-direction: column;
   margin-left: 2rem;
 
-  @media(max-height: 850px) {
-   
-     overflow: scroll;
-   
+  @media (max-height: 850px) {
+    overflow: scroll;
   }
-
-
 `;
 
 export const PageHeader = styled.div`
@@ -68,6 +63,7 @@ export const InputLabel = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
+    
     height: 100%;
     width: 0.3rem;
     transform: translate(-15px);
@@ -95,12 +91,13 @@ export const InputLabel = styled.div`
 
 export const EditButton = styled.button`
   width: 100px;
-  height: 30;
   background-color: transparent;
-  border: solid #9b98ee;
   color: #9b98ee;
+
   padding: 0.5rem;
+  border: solid #9b98ee;
   border-radius: 50px;
+  
   cursor: pointer;
   transition: 0.5s;
 

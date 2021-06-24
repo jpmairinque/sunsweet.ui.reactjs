@@ -31,8 +31,10 @@ export const PrivacyProvider = (props) => {
   }, [privacyInfo]);
 
   return (
+
     <PrivacyContext.Provider value={[privacyInfo, setPrivacyInfo]}>
       {props.children}
     </PrivacyContext.Provider>
+    
   );
 };
