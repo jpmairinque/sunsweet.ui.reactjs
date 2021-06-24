@@ -6,6 +6,11 @@ The app is the settings section of a social network. The interface was coded bas
 ## App Overview // *overview da aplicação* 💻
 
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/53411709/123342225-bd37f780-d525-11eb-8d58-4da2e9a937fd.gif)
+##
+- 👧🏼 **Profile** - View and edit your profile settings // *veja e edite seus dados de perfil*
+- 🎨 **Themes** - Change the background color // *mude a cor de fundo*
+- 🔐 **Privacy** - Set the safety settings // *selecione suas opções de segurança e privacidade*
+- 🔠 **Acessibility** - Change the text size // *mude o tamanho do texto*
 
 ## How to run / *como executar* 💿
 
@@ -19,7 +24,7 @@ Next, simply start the project
 ```
 yarn start || npm start
 ```
-## Tools Used / *ferramentas utilizadas* 🛠
+## Tools used / *ferramentas utilizadas* 🛠
 - React JS
 - Styled Components
 - Context API
