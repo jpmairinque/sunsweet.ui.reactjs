@@ -24,6 +24,31 @@ Next, simply start the project
 ```
 yarn start || npm start
 ```
+## Project Structure/ *estrutura do projeto* 🌳
+```
+├── public
+├── src
+│   └── assets // images
+│   └── components // componentes utilizados no projeto
+│       ├── Header
+│       ├── Navbar
+│   └── contexts // contextos da aplicação
+│       ├── PrivacyContext.jsx
+│       ├── ThemeContext.jsx
+│       ├── UserContext.jsx
+│   └── pages  // páginas da aplicação
+│       ├── Home
+│       ├── Profile
+│       ├── Privacy
+│       ├── Themes
+│       ├── Acessibility
+│       ├── Logout
+│   └── styles
+│       ├── global.js // global styling (styled-components) 
+│   └── App.jsx
+│   └── Index.jsx 
+│   └── routes.jsx // rotas da aplicação
+``` 
 ## Tools used / *ferramentas utilizadas* 🛠
 - React JS
 - Styled Components
