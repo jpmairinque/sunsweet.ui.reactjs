@@ -24,7 +24,7 @@ Next, simply start the project
 ```
 yarn start || npm start
 ```
-## Project Structure/ *estrutura do projeto* 🌳
+## Project Structure / *estrutura do projeto* 🌳
 ```
 ├── public
 ├── src
