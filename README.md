@@ -3,7 +3,7 @@ The app is the settings section of a social network. The interface was coded bas
 
 *// A aplicação consiste na seção de configurações de uma possível rede social.  A interface foi codada com base em um design que fiz no Figma para o desafio #DailyUI =)*
 
-<a href="https://sunsweet-ui-reactjs.vercel.app/home/themes" target="_blank"><img  alt="Open SunSweet"  src="https://img.shields.io/badge/open%20app-69BBDD?style=for-the-badge"></a>
+<a href="https://sunsweet-ui-reactjs.vercel.app/home/profile" target="_blank"><img  alt="Open SunSweet"  src="https://img.shields.io/badge/open%20app-69BBDD?style=for-the-badge"></a>
 ## App Overview // *overview da aplicação* 💻
 
 ![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/53411709/123342225-bd37f780-d525-11eb-8d58-4da2e9a937fd.gif)
