@@ -9,6 +9,7 @@ const Navbar = () => {
   const history = useHistory()
   const location = useLocation()
 
+  console.log('%cXABLAU','color: blue',location );
   const [userData] = useContext(UserContext);
 
   return (

@@ -45,6 +45,7 @@ const Profile = () => {
             <span>How should we call you?</span>
             {toggleEdit ? 
             <Input 
+              name='name'
               type="text" 
               maxLength="15"
               value={newData.name} 
@@ -58,6 +59,7 @@ const Profile = () => {
               <span>It’s your ID on our plataform!</span>
               {toggleEdit ? 
               <Input 
+              name='username'
               type="text" 
               maxLength="15"
               value={newData.username} 
@@ -71,6 +73,7 @@ const Profile = () => {
             <span>You can always change it.</span>
             {toggleEdit ? 
             <Input 
+            name='email'
             type="text" 
             maxLength="25"
             value={newData.email} 
@@ -84,6 +87,7 @@ const Profile = () => {
             <span>When were you born?</span>
             {toggleEdit ? 
             <Input 
+            name='birth'
             type="text" 
             maxLength="15"
             value={newData.birth} 
