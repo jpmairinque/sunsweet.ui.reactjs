@@ -24,6 +24,7 @@ const Acessibility = () => {
                   onClick={() => setThemeData(prev => ({...prev, fontsize: '16px'}))} 
                   font={'28px'}>Aa</A.FontBox>
               <A.FontBox 
+                  data-cy="biggerFont"
                   onClick={() => setThemeData(prev => ({...prev, fontsize: '18px'}))} 
                   font={'38px'}>Aa</A.FontBox>
            </A.FlexWrapper>

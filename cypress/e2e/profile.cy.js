@@ -1,7 +1,7 @@
 import Profile from "../../src/pages/Profile/Profile";
 import React from "react";
 
-describe("template spec", () => {
+describe("profile spec", () => {
   beforeEach(() => {
     // Cypress starts out with a blank slate for each test
     // so we must tell it to visit our website with the `cy.visit()` command.

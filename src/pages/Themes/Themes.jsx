@@ -4,7 +4,6 @@ import * as S from "../Profile/styles";
 import * as T from "./styles";
 
 const Themes = () => {
-  
   const [themeData, setThemeData] = useContext(ThemesContext);
 
   const themelist = {
@@ -14,32 +13,52 @@ const Themes = () => {
     bloomBlue: "linear-gradient(to right, #6a11cb 0%, #2575fc 100%)",
   };
 
+  console.log('%cXABLAU','color: blue',themeData );
   return (
-
     <S.PageContainer>
-        <S.PageHeader>
-          <S.PageTitle>Theme</S.PageTitle>
-        </S.PageHeader>
-        <T.FlexWrapper>
-          <T.ThemeBox
-            onClick={() => setThemeData(prev => ({...prev, background: themelist.pinkPlease}))}
-            theme={themelist.pinkPlease}
-          ></T.ThemeBox>
-          <T.ThemeBox
-            onClick={() => setThemeData(prev => ({...prev, background: themelist.deepPurple}))}
-            theme={themelist.deepPurple}
-          ></T.ThemeBox>
-          <T.ThemeBox
-            onClick={() => setThemeData(prev => ({...prev, background: themelist.cleanOrange}))}
-            theme={themelist.cleanOrange}
-          ></T.ThemeBox>
-          <T.ThemeBox
-            onClick={() => setThemeData(prev => ({...prev, background: themelist.bloomBlue}))}
-            theme={themelist.bloomBlue}
-          ></T.ThemeBox>
-        </T.FlexWrapper>
+      <S.PageHeader>
+        <S.PageTitle>Theme</S.PageTitle>
+      </S.PageHeader>
+      <T.FlexWrapper>
+        <T.ThemeBox
+          onClick={() =>
+            setThemeData((prev) => ({
+              ...prev,
+              background: themelist.pinkPlease,
+            }))
+          }
+          theme={themelist.pinkPlease}
+        ></T.ThemeBox>
+        <T.ThemeBox
+          data-cy="purpleThemeSection"
+          onClick={() =>
+            setThemeData((prev) => ({
+              ...prev,
+              background: themelist.deepPurple,
+            }))
+          }
+          theme={themelist.deepPurple}
+        ></T.ThemeBox>
+        <T.ThemeBox
+          onClick={() =>
+            setThemeData((prev) => ({
+              ...prev,
+              background: themelist.cleanOrange,
+            }))
+          }
+          theme={themelist.cleanOrange}
+        ></T.ThemeBox>
+        <T.ThemeBox
+          onClick={() =>
+            setThemeData((prev) => ({
+              ...prev,
+              background: themelist.bloomBlue,
+            }))
+          }
+          theme={themelist.bloomBlue}
+        ></T.ThemeBox>
+      </T.FlexWrapper>
     </S.PageContainer>
-
   );
 };
 

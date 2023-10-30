@@ -50,7 +50,7 @@ const Profile = () => {
               maxLength="15"
               value={newData.name} 
               onChange= {(e)=> setNewData(prevState => ({...prevState, name:e.target.value}))}/> 
-              : <p>{newData.name}</p>
+              : <p data-cy='nameDisplay'>{newData.name}</p>
             }
         </InputLabel>
 

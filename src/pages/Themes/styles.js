@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { GoUpAnimation } from "../Profile/styles";
 
-export const ThemeBox = styled.div`
+export const ThemeBox = styled.section`
   min-width: 150px;
   height: 150px;
   border-radius: 200px;
